@@ -1,11 +1,13 @@
 import styles from "../styles/Header.module.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import { MdDescription } from "react-icons/md";
 
 const socials = [
   { label: "Github", href: "https://github.com/20SHADOW05", icon: FaGithub },
   { label: "Linkedin", href: "https://www.linkedin.com/in/ankababu-s-351829358/", icon: FaLinkedin },
   { label: "Mail", href: "mailto:ankababu774@gmail.com", icon: IoMdMail },
+  { label: "Resume", href: "#", icon: MdDescription }
 ];
 
 export default function Header() {
@@ -13,7 +15,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.nameBlock}>
         <h1 className={styles.name}>Ankababu</h1>
-        <span className={styles.handle}>[ shad0w_05 ] • <a href="">Resume</a></span>
+        <span className={styles.handle}>[ shad0w_05 ]</span>
       </div>
 
       <div className={styles.row1}>

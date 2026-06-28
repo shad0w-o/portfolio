@@ -3,10 +3,38 @@
   padding: 72px var(--pad) 120px;
   display: flex;
   justify-content: center;
+  position: relative;
+}
+
+.site-wrap::before,
+.site-wrap::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #464646 0px,
+    #464646 6px,
+    transparent 6px,
+    transparent 14px
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.site-wrap::before {
+  left: calc(50% - 340px);
+}
+
+.site-wrap::after {
+  right: calc(50% - 340px);
 }
 
 main {
   width: 100%;
+  padding: 12px;
   max-width: var(--max-w);
   display: flex;
   flex-direction: column;

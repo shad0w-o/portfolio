@@ -25,6 +25,34 @@
 
 html { scroll-behavior: smooth; }
 
+html {
+  position: relative;
+}
+
+html::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle, #3f3e3e 1px, transparent 1px);
+  background-size: 24px 24px;
+  mask-image: linear-gradient(
+    to right,
+    black calc(50% - 340px),
+    transparent calc(50% - 340px),
+    transparent calc(50% + 340px),
+    black calc(50% + 340px)
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    black calc(50% - 340px),
+    transparent calc(50% - 340px),
+    transparent calc(50% + 340px),
+    black calc(50% + 340px)
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
 body {
   background: var(--bg);
   color: var(--text-primary);
