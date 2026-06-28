@@ -3,63 +3,57 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 
 const socials = [
-  { label: "github", href: "https://github.com/20SHADOW05", icon: FaGithub },
-  { label: "linkedin", href: "https://linkedin.com/in/yourprofile", icon: FaLinkedin },
-  { label: "email", href: "mailto:your@email.com", icon: IoMdMail },
+  { label: "Github", href: "https://github.com/20SHADOW05", icon: FaGithub },
+  { label: "Linkedin", href: "https://www.linkedin.com/in/ankababu-s-351829358/", icon: FaLinkedin },
+  { label: "Mail", href: "mailto:ankababu774@gmail.com", icon: IoMdMail },
 ];
 
 export default function Header() {
   return (
     <header className={styles.header}>
-      {/* Name block */}
       <div className={styles.nameBlock}>
         <h1 className={styles.name}>Ankababu</h1>
-        <span className={styles.handle}>[ shadow_05 ]</span>
+        <span className={styles.handle}>[ shad0w_05 ] • <a href="">Resume</a></span>
       </div>
 
-      {/* Two-col: socials + summary */}
-      <div className={styles.intro}>
-        <div className={styles.left}>
-          <div className={styles.socialsLabel}>find me</div>
-          <ul className={styles.socials}>
-            {socials.map((s) => (
-              <li key={s.label}>
-                <a
-                  href={s.href}
-                  target={s.href.startsWith("mailto") ? undefined : "_blank"}
-                  rel="noreferrer"
-                  className={styles.socialLink}
-                >
-                  <s.icon size={20}/>
-                  <span>{s.label}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
+      <div className={styles.row1}>
+        <ul className={styles.socials}>
+          {socials.map((s) => (
+            <li key={s.label}>
+              <a
+                href={s.href}
+                target={s.href.startsWith("mailto") ? undefined : "_blank"}
+                rel="noreferrer"
+                className={styles.socialLink}
+              >
+                <s.icon size={18} />
+                <span>{s.label}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <p className={styles.summary}>
+          CSE student focused on backend systems, with a growing interest in
+          low-level systems and how things actually work under the hood.
+          Recently getting into agentic systems and developer tooling.
+        </p>
+      </div>
+
+      <div className={styles.row2}>
+        <div className={styles.fact}>
+          <span className={styles.factKey}>STATUS</span>
+          <span className={styles.factVal}>
+            <span className={styles.dot} />student • open to internships
+          </span>
         </div>
-
-        <div className={styles.right}>
-          <p className={styles.summary}>
-            CSE student passionate about backend and low-level systems, with a keen interest in how systems work behind the scenes. Interested in developer
-            tooling, graph visualizations, and backend systems.
-          </p>
-
-          <div className={styles.facts}>
-            <div className={styles.fact}>
-              <span className={styles.factKey}>status</span>
-              <span className={styles.factVal}>
-                <span className={styles.dot} /> student · open to internships
-              </span>
-            </div>
-            <div className={styles.fact}>
-              <span className={styles.factKey}>focus</span>
-              <span className={styles.factVal}>full-stack · backend systems</span>
-            </div>
-            <div className={styles.fact}>
-              <span className={styles.factKey}>building</span>
-              <span className={styles.factVal}>depGraph — npm dependency viz</span>
-            </div>
-          </div>
+        <div className={styles.fact}>
+          <span className={styles.factKey}>FOCUS</span>
+          <span className={styles.factVal}>backend • full stack • systems</span>
+        </div>
+        <div className={styles.fact}>
+          <span className={styles.factKey}>BUILDING</span>
+          <span className={styles.factVal}>depGraph — npm dependency viz</span>
         </div>
       </div>
     </header>

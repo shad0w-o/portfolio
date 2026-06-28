@@ -10,7 +10,7 @@ main {
   max-width: var(--max-w);
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 60px;
 }
 
 @media (max-width: 640px) {

@@ -1,14 +1,14 @@
 .header {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 0;
 }
 
-/* ── Name block ── */
 .nameBlock {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  margin-bottom: 40px;
 }
 
 .name {
@@ -21,46 +21,30 @@
 
 .handle {
   font-size: 13px;
-  font-weight: 400;
   color: var(--text-secondary);
   letter-spacing: 0.04em;
 }
 
-/* ── Two-col intro ── */
-.intro {
+/* ── Row 1: socials + summary ── */
+.row1 {
   display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 40px;
-  padding-top: 32px;
+  grid-template-columns: 120px 1fr;
+  gap: 32px;
+  padding: 28px 0;
   border-top: 1px solid var(--border);
-}
-
-/* ── Left: socials ── */
-.left {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.socialsLabel {
-  font-size: 10px;
-  color: var(--text-secondary);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
 }
 
 .socials {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .socialLink {
   display: flex;
-  align-items: center;
   gap: 9px;
+  font-size: 13px;
   color: var(--text-secondary);
-  font-size: 12px;
   letter-spacing: 0.02em;
   transition: color 0.15s;
 }
@@ -69,55 +53,43 @@
   color: var(--accent);
 }
 
-.socialLink svg {
-  flex-shrink: 0;
-  opacity: 0.7;
-}
-
-.socialLink:hover svg {
-  opacity: 1;
-}
-
-/* ── Right: summary + facts ── */
-.right {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
-
 .summary {
   font-size: 13px;
   color: var(--text-secondary);
-  line-height: 1.75;
+  line-height: 2;
 }
 
-.facts {
+/* ── Row 2: facts ── */
+.row2 {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  border-top: 1px solid var(--border);
+  padding: 28px 0 0;
+  gap: 12px;
 }
 
 .fact {
   display: flex;
-  gap: 16px;
-  align-items: baseline;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
 }
 
 .factKey {
-  font-size: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
   color: var(--text-secondary);
   letter-spacing: 0.08em;
-  text-transform: uppercase;
-  min-width: 56px;
-  flex-shrink: 0;
+  min-width: 66px;
 }
 
 .factVal {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--text-secondary);
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 7px;
 }
 
 .dot {
@@ -135,9 +107,6 @@
 }
 
 @media (max-width: 560px) {
-  .intro {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-  .socials { flex-direction: row; flex-wrap: wrap; gap: 14px; }
+  .row1 { grid-template-columns: 1fr; }
+  .row2 { gap: 24px; }
 }

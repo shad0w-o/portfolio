@@ -1,6 +1,7 @@
 .projects {
   border-top: 1px solid var(--border);
   padding-top: 0;
+  margin-top: 20px;
 }
 
 .list {

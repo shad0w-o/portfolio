@@ -16,21 +16,20 @@
   gap: 24px;
   padding: 20px 0;
   border-bottom: 1px solid var(--border);
-  align-items: start;
+  align-items: center;
 }
 
 .groupLabel {
-  font-size: 10px;
+  font-size: 11px;
   color: var(--text-secondary);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding-top: 3px;
 }
 
 .chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 12px;
 }
 
 .chip {

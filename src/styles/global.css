@@ -3,10 +3,10 @@
 :root {
   --bg: #0c0c0c;
   --bg-card: #111;
-  --border: #1e1e1e;
-  --border-mid: #2a2a2a;
+  --border: #3a3737;
+  --border-mid: #343232;
   --text-primary: #ece7dd;
-  --text-secondary: #a6a49c;
+  --text-secondary: #c1bfb8;
   --accent: #c8ff00;
   --accent-dim: rgba(200, 255, 0, 0.06);
 
@@ -40,6 +40,6 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 
 ::selection { background: var(--accent); color: #000; }
 
-::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar { width: 0; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border-mid); }
