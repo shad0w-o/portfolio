@@ -1,11 +1,17 @@
-.projects {
-  border-top: 1px solid var(--border);
-  padding-top: 0;
+/* .projects {
+  padding-top: 28px;
   margin-top: 20px;
-}
+} */
 
 .list {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 60px;
+}
+
+.textH {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
+  color: var(--text-secondary);
 }

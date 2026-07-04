@@ -1,0 +1,22 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(32px, 3vw, 3vw);
+  margin-bottom: 24px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+  transition: color 0.15s;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: var(--accent);
+}

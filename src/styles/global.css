@@ -4,6 +4,7 @@
   --bg: #0c0c0c;
   --bg-card: #111;
   --border: #3a3737;
+  --border-pj: #4b4747;
   --border-mid: #343232;
   --text-primary: #ece7dd;
   --text-secondary: #c1bfb8;
@@ -33,7 +34,7 @@ html::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: radial-gradient(circle, #3f3e3e 1px, transparent 1px);
+  background-image: radial-gradient(circle, #515050 1px, transparent 1px);  /* prev_color : 3f3e3e */
   background-size: 24px 24px;
   mask-image: linear-gradient(
     to right,
@@ -71,3 +72,9 @@ button { font-family: var(--font); cursor: pointer; border: none; background: no
 ::-webkit-scrollbar { width: 0; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--border-mid); }
+
+#about,
+#skills,
+#projects {
+  scroll-margin-top: 80px;
+}

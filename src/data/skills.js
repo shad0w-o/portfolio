@@ -1,7 +1,13 @@
+import { FaJsSquare, FaJava, FaPython, FaHtml5, FaReact, FaNodeJs, FaGitAlt, FaDocker, FaLinux,  } from "react-icons/fa";
+import { FaGolang, FaCss } from "react-icons/fa6";
+import { SiExpress, SiEjs, SiTailwindcss, SiMongodb, SiVscodium, SiIntellijidea } from "react-icons/si";
+import { BiLogoPostgresql } from "react-icons/bi";
+
+
 export const skillGroups = [
   {
     label: "Languages",
-    skills: ["JavaScript", "Python", "Java", "Go", "SQL", "HTML", "CSS"],
+    skills: ["JavaScript", "Python", "Java", "Go", "HTML", "CSS"],
   },
   {
     label: "Frameworks & Libraries",
@@ -9,7 +15,7 @@ export const skillGroups = [
   },
   {
     label: "Databases",
-    skills: ["PostgreSQL", "MongoDB"],
+    skills: ["PostgreSQL", "MongoDB", "Redis"],
   },
   {
     label: "Tools & Platforms",

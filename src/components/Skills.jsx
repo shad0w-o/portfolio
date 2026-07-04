@@ -1,4 +1,4 @@
-import { skillGroups } from "../data/skills";
+import { skillGroups } from "../data/skills.js";
 import styles from "../styles/Skills.module.css";
 
 export default function Skills() {

@@ -6,13 +6,15 @@
 
 .nameBlock {
   display: flex;
-  flex-direction: column;
-  gap: 6px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: clamp(32px, 3vw, 3vw);
   margin-bottom: 40px;
 }
 
 .name {
-  font-size: 42px;
+  font-size: clamp(2rem, 4vw, 2.625rem);
   font-weight: 700;
   letter-spacing: -0.03em;
   color: var(--text-primary);
@@ -25,19 +27,40 @@
   letter-spacing: 0.04em;
 }
 
-/* ── Row 1: socials + summary ── */
-.row1 {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 32px;
-  padding: 28px 0;
-  border-top: 1px solid var(--border);
-}
-
-.socials {
+.nameText {
   display: flex;
   flex-direction: column;
   gap: 6px;
+}
+
+.pfp {
+  width: 128px;
+  height: 128px;
+  object-fit: cover;
+  border: 1px solid var(--border-mid);
+  border-radius: 50% !important;
+  flex-shrink: 0;
+}
+
+/* ── Summary ── */
+.summaryRow {
+  border-top: 1px solid var(--border);
+  padding: 28px 0;
+}
+
+.summary {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 2;
+}
+
+/* ── Socials ── */
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
 }
 
 .socialLink {
@@ -53,13 +76,7 @@
   color: var(--accent);
 }
 
-.summary {
-  font-size: 13px;
-  color: var(--text-secondary);
-  line-height: 2;
-}
-
-/* ── Row 2: facts ── */
+/* ── Facts ── */
 .row2 {
   display: flex;
   flex-direction: column;
@@ -79,6 +96,7 @@
   display: flex;
   align-items: center;
   font-size: 12px;
+  font-weight: 600;
   color: var(--text-secondary);
   letter-spacing: 0.08em;
   min-width: 66px;
@@ -107,6 +125,6 @@
 }
 
 @media (max-width: 560px) {
-  .row1 { grid-template-columns: 1fr; }
+  .socials { gap: 12px 20px; }
   .row2 { gap: 24px; }
 }

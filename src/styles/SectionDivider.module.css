@@ -1,0 +1,40 @@
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+}
+
+.cap {
+  font-size: 15px;
+  line-height: 1;
+  color: var(--text-secondary);
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background: var(--text-secondary);
+  opacity: 0.6;
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.dotSmall {
+  width: 4px;
+  height: 4px;
+  border-radius: 50% !important;
+  background: var(--text-secondary);
+}
+
+.dotBig {
+  width: 9px;
+  height: 9px;
+  border-radius: 50% !important;
+  background: var(--accent);
+}

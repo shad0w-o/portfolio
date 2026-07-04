@@ -10,6 +10,7 @@ export default function Projects() {
           <ProjectCard key={project.id} project={project} index={i} />
         ))}
       </div>
+      <span className={styles.textH}>more to come (hopefully...)</span>
     </section>
   );
 }

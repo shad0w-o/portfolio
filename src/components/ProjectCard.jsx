@@ -9,15 +9,29 @@ export default function ProjectCard({ project, index }) {
     const card = cardRef.current;
     const glow = glowRef.current;
     if (!card || !glow) return;
+
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    glow.style.background = `radial-gradient(350px circle at ${x}px ${y}px, rgba(200,255,0,0.055), transparent 65%)`;
+    const px = (x / rect.width) * 100;
+    const py = (y / rect.height) * 100;
+
+    glow.style.background = `radial-gradient(350px circle at ${x}px ${y}px, rgba(200,255,0,0.06), transparent 65%)`;
+
+    const rotateX = ((py - 50) / 50) * -5;
+    const rotateY = ((px - 50) / 50) * 5;
+    card.style.transform = `perspective(900px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
   };
 
   const handleMouseLeave = () => {
     if (glowRef.current) glowRef.current.style.background = "transparent";
+    if (cardRef.current)
+      card_reset(cardRef.current);
   };
+
+  function card_reset(card) {
+    card.style.transform = "perspective(900px) rotateX(0deg) rotateY(0deg)";
+  }
 
   return (
     <article
