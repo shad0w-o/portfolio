@@ -1,14 +1,14 @@
 import styles from "../styles/Header.module.css";
-import { FaGithub, FaLinkedin, FaDiscord } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { GoDownload } from "react-icons/go";
 import { IoMdMail } from "react-icons/io";
-import { MdDescription } from "react-icons/md";
+import { MdDescription, MdFileDownload } from "react-icons/md";
 
 const socials = [
-    { label: "Resume", href: "#", icon: MdDescription },
+  { label: "Resume", href: "/resume.pdf", icon: MdDescription },
   { label: "Github", href: "https://github.com/shad0w-o", icon: FaGithub },
   { label: "Linkedin", href: "https://www.linkedin.com/in/ankababu-s-351829358/", icon: FaLinkedin },
-  { label: "Mail", href: "mailto:ankababu774@gmail.com", icon: IoMdMail },
-  { label: "Discord", href: "https://discord.com/users/976662761528512525", icon: FaDiscord }
+  { label: "Mail", href: "mailto:ankababu774@gmail.com", icon: IoMdMail }
 ];
 
 export default function Header() {
@@ -45,6 +45,16 @@ export default function Header() {
               <s.icon size={18} />
               <span>{s.label}</span>
             </a>
+            {s.label === "Resume" && (
+              <a
+                href="/resume.pdf"
+                download="Ankababu_Resume.pdf"
+                className={styles.socialLink}
+                aria-label="Download resume"
+              >
+                <MdFileDownload size={18} />
+              </a>
+            )}
           </li>
         ))}
       </ul>

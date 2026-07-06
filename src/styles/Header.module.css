@@ -76,6 +76,12 @@
   color: var(--accent);
 }
 
+.socials>li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
 /* ── Facts ── */
 .row2 {
   display: flex;
@@ -120,11 +126,23 @@
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.25; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.25;
+  }
 }
 
 @media (max-width: 560px) {
-  .socials { gap: 12px 20px; }
-  .row2 { gap: 24px; }
+  .socials {
+    gap: 12px 20px;
+  }
+
+  .row2 {
+    gap: 24px;
+  }
 }
