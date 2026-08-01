@@ -10,6 +10,7 @@
   --text-secondary: #c1bfb8;
   --accent: #c8ff00;
   --accent-dim: rgba(200, 255, 0, 0.06);
+  --divider: rgba(205, 199, 199, 0.45);
 
   --font: 'JetBrains Mono', monospace;
 
@@ -28,30 +29,6 @@ html { scroll-behavior: smooth; }
 
 html {
   position: relative;
-}
-
-html::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: radial-gradient(circle, #515050 1px, transparent 1px);  /* prev_color : 3f3e3e */
-  background-size: 24px 24px;
-  mask-image: linear-gradient(
-    to right,
-    black calc(50% - 340px),
-    transparent calc(50% - 340px),
-    transparent calc(50% + 340px),
-    black calc(50% + 340px)
-  );
-  -webkit-mask-image: linear-gradient(
-    to right,
-    black calc(50% - 340px),
-    transparent calc(50% - 340px),
-    transparent calc(50% + 340px),
-    black calc(50% + 340px)
-  );
-  pointer-events: none;
-  z-index: 0;
 }
 
 body {

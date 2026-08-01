@@ -10,7 +10,6 @@
   align-items: center;
   justify-content: space-evenly;
   gap: clamp(32px, 3vw, 3vw);
-  margin-bottom: 40px;
 }
 
 .name {
@@ -44,8 +43,7 @@
 
 /* ── Summary ── */
 .summaryRow {
-  border-top: 1px solid var(--border);
-  padding: 28px 0;
+  padding-top: 48px;
 }
 
 .summary {
@@ -59,8 +57,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px 24px;
-  border-top: 1px solid var(--border);
-  padding: 24px 0;
+  padding-top: 48px;
 }
 
 .socialLink {
@@ -86,8 +83,7 @@
 .row2 {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid var(--border);
-  padding: 28px 0 0;
+  padding-top: 48px;
   gap: 12px;
 }
 
@@ -106,6 +102,19 @@
   color: var(--text-secondary);
   letter-spacing: 0.08em;
   min-width: 66px;
+}
+
+.bracket {
+  margin: 0 2px;
+  color: var(--accent);
+}
+
+.label {
+  margin: 0 4px;
+}
+
+.arrow {
+  margin-left: 12px;
 }
 
 .factVal {

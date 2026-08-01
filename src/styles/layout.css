@@ -34,11 +34,10 @@
 
 main {
   width: 100%;
-  padding: 16px;
+  padding: 24px;
   max-width: var(--max-w);
   display: flex;
   flex-direction: column;
-  gap: 32px;
 }
 
 @media (max-width: 640px) {

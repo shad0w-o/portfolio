@@ -123,6 +123,12 @@
   flex-shrink: 0;
 }
 
+.links a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .link {
   font-size: 11px;
   color: var(--text-secondary);

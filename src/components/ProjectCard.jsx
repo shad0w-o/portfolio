@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import styles from "../styles/ProjectCard.module.css";
+import { RiArrowRightUpLongLine } from "react-icons/ri";
 
 export default function ProjectCard({ project, index }) {
   const cardRef = useRef(null);
@@ -72,12 +73,12 @@ export default function ProjectCard({ project, index }) {
           <div className={styles.links}>
             {project.github && (
               <a href={project.github} target="_blank" rel="noreferrer" className={styles.link}>
-                github ↗
+                github <RiArrowRightUpLongLine />
               </a>
             )}
             {project.live && (
               <a href={project.live} target="_blank" rel="noreferrer" className={styles.link}>
-                live ↗
+                live <RiArrowRightUpLongLine />
               </a>
             )}
           </div>

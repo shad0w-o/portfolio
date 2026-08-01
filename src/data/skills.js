@@ -7,7 +7,7 @@ import { BiLogoPostgresql } from "react-icons/bi";
 export const skillGroups = [
   {
     label: "Languages",
-    skills: ["JavaScript", "Python", "Java", "Go", "HTML", "CSS"],
+    skills: ["JavaScript", "Go", "Java", "Python", "HTML", "CSS"],
   },
   {
     label: "Frameworks & Libraries",
@@ -19,6 +19,6 @@ export const skillGroups = [
   },
   {
     label: "Tools & Platforms",
-    skills: ["Git", "Docker", "Linux", "VS Codium", "IntelliJ"],
+    skills: ["Git", "Docker", "Nginx", "Linux", "VS Codium", "IntelliJ"],
   },
 ];

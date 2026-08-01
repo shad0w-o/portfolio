@@ -5,10 +5,12 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import SectionDivider from "./components/SectionDivider";
 import Nav from "./components/Nav";
+import DotGrid from "./components/DotGrid";
 
 export default function App() {
   return (
     <div className="site-wrap">
+      <DotGrid />
       <main>
         <Nav />
         <section id="about">

@@ -1,9 +1,22 @@
-/* .projects {
-  padding-top: 28px;
-  margin-top: 20px;
-} */
+.title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.08em;
+  padding-bottom: 6px;
+}
+
+.bracket {
+  margin: 0 2px;
+  color: var(--accent);
+}
+
+.label {
+  margin: 0 4px;
+}
 
 .list {
+  margin-top: 48px;
   display: flex;
   flex-direction: column;
   gap: 60px;

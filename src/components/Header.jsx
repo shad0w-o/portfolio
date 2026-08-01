@@ -24,16 +24,39 @@ export default function Header() {
 
       <div className={styles.summaryRow}>
         <p className={styles.summary}>
-          Hi, i'm a cse student trying to get better at backend systems and full
-          stack development. i wanna get into low level programming and
-          inference engineering next. outside of academics, i spend most of my time writing code,
-          watching anime, following mma and esports, or listening to music.
-          recently, i've been getting into ctf challenges. oh! almost forgot, i use arch btw ;)
+          Hi, i'm a cse student interested in backend engineering, and i also enjoy full stack development. next, i want to explore low level programming and eventually inference engineering.
+          <br /><br />
+          outside of academics, i spend most of my time writing code, watching anime, following mma and esports, or listening
+          to music. recently, i've been getting into ctf challenges.
+          <br /><br />
+          oh! almost forgot, i use arch btw ;)
         </p>
       </div>
 
+      <div className={styles.row2}>
+        <div className={styles.fact}>
+          <span className={styles.factKey}>STATUS</span>
+          <span className={styles.factVal}>
+            <span className={styles.dot} />student • open to internships
+          </span>
+        </div>
+        <div className={styles.fact}>
+          <span className={styles.factKey}>FOCUS</span>
+          <span className={styles.factVal}>backend • full stack • systems</span>
+        </div>
+        <div className={styles.fact}>
+          <span className={styles.factKey}>BUILDING</span>
+          <span className={styles.factVal}>checkpoint — a toy api implementing idempotency keys using Go</span>
+        </div>
+      </div>
+
       <ul className={styles.socials}>
-        <span className={styles.factKey}>CONTACT &nbsp;{"--->"} </span>
+        <span className={styles.factKey}>
+          <span className={styles.bracket}>[</span>
+          <span className={styles.label}>CONTACT</span>
+          <span className={styles.bracket}>]</span>
+          <span className={styles.arrow}>{" --->"}</span>
+        </span>
         {socials.map((s) => (
           <li key={s.label}>
             <a
@@ -58,23 +81,6 @@ export default function Header() {
           </li>
         ))}
       </ul>
-
-      <div className={styles.row2}>
-        <div className={styles.fact}>
-          <span className={styles.factKey}>STATUS</span>
-          <span className={styles.factVal}>
-            <span className={styles.dot} />student • open to internships
-          </span>
-        </div>
-        <div className={styles.fact}>
-          <span className={styles.factKey}>FOCUS</span>
-          <span className={styles.factVal}>backend • full stack • systems</span>
-        </div>
-        <div className={styles.fact}>
-          <span className={styles.factKey}>BUILDING</span>
-          <span className={styles.factVal}>depGraph — npm dependency viz</span>
-        </div>
-      </div>
     </header>
   );
 }

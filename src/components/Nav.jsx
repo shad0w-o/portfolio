@@ -1,9 +1,9 @@
 import styles from "../styles/Nav.module.css";
 
 const links = [
-  { label: "about", href: "#about" },
-  { label: "skills", href: "#skills" },
-  { label: "projects", href: "#projects" },
+  { label: "[ABOUT]", href: "#about" },
+  { label: "[SKILLS]", href: "#skills" },
+  { label: "[PROJECTS]", href: "#projects" },
 ];
 
 export default function Nav() {
