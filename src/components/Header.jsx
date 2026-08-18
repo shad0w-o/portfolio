@@ -70,7 +70,7 @@ export default function Header() {
             </a>
             {s.label === "Resume" && (
               <a
-                href="/resume.pdf"
+                href="/Ankababu_Resume.pdf"
                 download="Ankababu_Resume.pdf"
                 className={styles.socialLink}
                 aria-label="Download resume"
