@@ -1,11 +1,15 @@
 import styles from "../styles/Header.module.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { GoDownload } from "react-icons/go";
 import { IoMdMail } from "react-icons/io";
 import { MdDescription, MdFileDownload } from "react-icons/md";
 
+// Bump this every time you replace /public/resume.pdf so browsers and
+// CDNs are forced to fetch the new file instead of serving a cached copy.
+const RESUME_VERSION = "2026-08-18";
+const RESUME_URL = `/resume.pdf?v=${RESUME_VERSION}`;
+
 const socials = [
-  { label: "Resume", href: "/resume.pdf", icon: MdDescription },
+  { label: "Resume", href: RESUME_URL, icon: MdDescription },
   { label: "Github", href: "https://github.com/shad0w-o", icon: FaGithub },
   { label: "Linkedin", href: "https://www.linkedin.com/in/ankababu-s-351829358/", icon: FaLinkedin },
   { label: "Mail", href: "mailto:ankababu774@gmail.com", icon: IoMdMail }
@@ -70,7 +74,7 @@ export default function Header() {
             </a>
             {s.label === "Resume" && (
               <a
-                href="/Ankababu_Resume.pdf"
+                href={RESUME_URL}
                 download="Ankababu_Resume.pdf"
                 className={styles.socialLink}
                 aria-label="Download resume"
