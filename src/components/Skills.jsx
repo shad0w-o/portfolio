@@ -12,7 +12,7 @@ export default function Skills() {
       </span>
       <div className={styles.groups}>
         {skillGroups.map((group) => (
-          <div key={group.label} className={group.label === "Tools & Platforms" ? styles.splgroup : styles.group}>
+          <div key={group.label} className={group.label === "Cloud" ? styles.splgroup : styles.group}>
             <span className={styles.groupLabel}>{group.label}</span>
             <div className={styles.chips}>
               {group.skills.map((skill) => (

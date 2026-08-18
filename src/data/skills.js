@@ -21,4 +21,8 @@ export const skillGroups = [
     label: "Tools & Platforms",
     skills: ["Git", "Docker", "Nginx", "Linux", "VS Codium", "IntelliJ"],
   },
+  {
+    label: "Cloud",
+    skills: ["AWS (EC2, ALB, ASG, S3)", "Heroku", "Cloudflare", "Vercel"]
+  }
 ];
