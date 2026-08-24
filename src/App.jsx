@@ -11,16 +11,7 @@ import Nav from "./components/Nav";
 import DotGrid from "./components/DotGrid";
 
 export default function App() {
-  const [bitsOn, setBitsOn] = useState(() => {
-    try {
-      const v = localStorage.getItem("bitsOn");
-      return v ? JSON.parse(v) : true;
-    } catch { return true; }
-  });
-
-  useEffect(() => {
-    localStorage.setItem("bitsOn", JSON.stringify(bitsOn));
-  }, [bitsOn]);
+  const [bitsOn, setBitsOn] = useState(true);
 
   useEffect(() => {
     console.log(
@@ -28,20 +19,6 @@ export default function App() {
       "background:#c8ff00;color:#000;padding:3px 8px;font-family:'JetBrains Mono',monospace;font-weight:700",
       "color:#ece7dd;background:#111;padding:3px 8px;font-family:'JetBrains Mono',monospace"
     );
-  }, []);
-
-  // visit tracking — skip owner (set ?owner=1 once) and localhost
-  useEffect(() => {
-    try {
-      const params = new URLSearchParams(window.location.search);
-      if (params.get("owner") === "1") {
-        localStorage.setItem("isOwner", "1");
-        console.log("owner mode: visits not tracked");
-      }
-      if (localStorage.getItem("isOwner") === "1") return;
-      if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") return;
-      console.log("visit tracked");
-    } catch {}
   }, []);
 
   // Toggle ONLY on drag-release past threshold
