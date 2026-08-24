@@ -1,11 +1,15 @@
 import { useEffect, useRef } from "react";
 
-export default function DotGrid() {
+export default function DotGrid({ bitsOn = true }) {
   const canvasRef = useRef(null);
+  const bitsOnRef = useRef(bitsOn);
+  useEffect(() => { bitsOnRef.current = bitsOn; }, [bitsOn]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    if (!canvas) return;
     const ctx = canvas.getContext("2d");
+    if (!ctx) return;
 
     const spacingDesktop = 24;
     const spacingMobile = 32;
@@ -190,10 +194,18 @@ export default function DotGrid() {
     function drawDot(d, scrollY) {
       const px = d.x, py = d.y - scrollY;
 
+      // dots mode: simple circle, no bit text
+      if (!bitsOnRef.current) {
+        ctx.fillStyle = `rgba(${dimColor}, ${dimAlpha})`;
+        ctx.shadowBlur = 0;
+        ctx.beginPath();
+        ctx.arc(px, py, 1.6, 0, Math.PI * 2);
+        ctx.fill();
+        return;
+      }
+
       if (d.phase === "charging") {
         const elapsed = chargeFrames - d.timer;
-        // hold the shape steady at first, only re-jitter every few frames,
-        // then let intensity fade over the tail end of the charge
         if (elapsed > sparkHoldFrames && elapsed % sparkJitterEvery === 0 && d.spark) {
           jitterSpark(d.spark);
         }
@@ -235,19 +247,34 @@ export default function DotGrid() {
       ctx.textBaseline = "middle";
 
       for (const d of dots) {
-        stepDot(d);
+        if (bitsOnRef.current) stepDot(d);
+        else {
+          // reset any in-flight shock when switched to dots mode
+          if (d.phase !== "idle") {
+            d.phase = "idle";
+            d.value = 0;
+            d.timer = 0;
+            d.spark = null;
+          }
+        }
 
         if (d.oy < scrollY - margin || d.oy > scrollY + vh + margin) continue;
 
-        const dx = d.ox - pointer.x;
-        const dy = d.oy - pointer.y;
-        const dist = Math.hypot(dx, dy);
         let tx = d.ox, ty = d.oy;
-        if (dist < repelRadius) {
-          const force = (1 - dist / repelRadius) * repelStrength;
-          const angle = Math.atan2(dy, dx);
-          tx += Math.cos(angle) * force;
-          ty += Math.sin(angle) * force;
+        // repel only when bits are OFF (dots mode)
+        if (!bitsOnRef.current) {
+          const dx = d.ox - pointer.x;
+          const dy = d.oy - pointer.y;
+          const dist = Math.hypot(dx, dy);
+          if (dist < repelRadius) {
+            const force = (1 - dist / repelRadius) * repelStrength;
+            const angle = Math.atan2(dy, dx);
+            tx += Math.cos(angle) * force;
+            ty += Math.sin(angle) * force;
+          }
+        } else {
+          // when bits ON, ease back to origin if displaced
+          // (no repel, just spring back)
         }
         d.x += (tx - d.x) * ease;
         d.y += (ty - d.y) * ease;
@@ -257,7 +284,7 @@ export default function DotGrid() {
       ctx.shadowBlur = 0;
 
       frame++;
-      if (frame % shockEveryFrames === 0) triggerShock();
+      if (bitsOnRef.current && frame % shockEveryFrames === 0) triggerShock();
 
       rafId = requestAnimationFrame(animate);
     }

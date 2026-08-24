@@ -16,6 +16,15 @@
 
   --max-w: 680px;
   --pad: 48px;
+
+  --pullcord-right: calc(50% - 405px);
+  --pullcord-top: 0px;
+  --pullcord-ink: rgba(180, 180, 180, 0.55);
+  --pullcord-z: 6;
+}
+
+@media (max-width: 860px) {
+  .pullcord { display: none !important; }
 }
 
 *, *::before, *::after {

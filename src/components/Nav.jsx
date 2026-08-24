@@ -9,7 +9,7 @@ const links = [
 export default function Nav() {
   return (
     <nav className={styles.nav}>
-      {links.map((l, i) => (
+      {links.map((l) => (
         <a key={l.label} href={l.href} className={styles.link}>
           {l.label}
         </a>

@@ -1,9 +1,3 @@
-import { FaJsSquare, FaJava, FaPython, FaHtml5, FaReact, FaNodeJs, FaGitAlt, FaDocker, FaLinux,  } from "react-icons/fa";
-import { FaGolang, FaCss } from "react-icons/fa6";
-import { SiExpress, SiEjs, SiTailwindcss, SiMongodb, SiVscodium, SiIntellijidea } from "react-icons/si";
-import { BiLogoPostgresql } from "react-icons/bi";
-
-
 export const skillGroups = [
   {
     label: "Languages",

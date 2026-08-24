@@ -28,9 +28,9 @@ export default function Header() {
 
       <div className={styles.summaryRow}>
         <p className={styles.summary}>
-          Hi, i'm a cse student interested in backend engineering. i also enjoy full stack development. next, i want to explore low level programming and eventually inference engineering.
+          Hi, i'm a cse student interested in backend engineering. i also enjoy full stack development. next, i want to explore inference engineering.
           <br /><br />
-          outside of academics, i spend most of my time writing code, watching anime, following mma and esports, or listening
+          outside of academics, i spend most of my time writing code, watching anime, following MMA and e-sports, or listening
           to music. recently, i've been getting into ctf challenges.
           <br /><br />
           oh! almost forgot, i use arch btw ;)
