@@ -9,7 +9,8 @@
   flex-direction: column;
 }
 
-.group , .splgroup {
+.group,
+.splgroup {
   display: grid;
   grid-template-columns: 100px 1fr;
   gap: 24px;
@@ -51,16 +52,44 @@
   background: var(--accent-dim);
 }
 
-@media (max-width: 480px) {
-  .group { grid-template-columns: 1fr; gap: 10px; }
-}
-
 .title {
   font-size: 12px;
   color: var(--text-secondary);
   font-weight: 600;
   letter-spacing: 0.08em;
   margin-bottom: 20px;
+}
+
+@media (max-width: 560px) {
+
+  .group,
+  .splgroup {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 14px 0;
+  }
+
+  .splgroup {
+    padding-bottom: 8px;
+  }
+
+  .groupLabel {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+  }
+
+  .chips {
+    gap: 8px;
+  }
+
+  .chip {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
+  .title {
+    margin-bottom: 12px;
+  }
 }
 
 .bracket {

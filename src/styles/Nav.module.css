@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: clamp(72px, 3vw, 3vw);
+  gap: clamp(118px, 5vw, 5vw);
   margin-bottom: 48px;
 }
 
@@ -20,4 +20,10 @@
 
 .link:hover {
   color: var(--accent);
+}
+
+@media (max-width: 560px) {
+  .nav {
+    gap: clamp(56px, 3vw, 3vw);
+  }
 }

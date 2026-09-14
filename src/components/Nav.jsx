@@ -2,7 +2,7 @@ import styles from "../styles/Nav.module.css";
 
 const links = [
   { label: "[ABOUT]", href: "#about" },
-  { label: "[SKILLS]", href: "#skills" },
+  { label: "[TECH STACK]", href: "#skills" },
   { label: "[PROJECTS]", href: "#projects" },
 ];
 

@@ -7,7 +7,7 @@ export default function Skills() {
 
       <span className={styles.title}>
         <span className={styles.bracket}>[</span>
-        <span className={styles.label}>SKILLS</span>
+        <span className={styles.label}>TECH STACK</span>
         <span className={styles.bracket}>]</span>
       </span>
       <div className={styles.groups}>

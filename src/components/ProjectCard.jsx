@@ -60,7 +60,11 @@ export default function ProjectCard({ project, index }) {
           <span className={styles.index}>{String(index + 1).padStart(2, "0")}</span>
         </div>
 
+        <span className={styles.mobileIndex}>{String(index + 1).padStart(2, "0")}</span>
         <h3 className={styles.title}>{project.title}</h3>
+      </div>
+
+      <div className={styles.body}>
         <p className={styles.description}>{project.description}</p>
 
         <div className={styles.footer}>

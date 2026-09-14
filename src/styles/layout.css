@@ -13,13 +13,11 @@
   top: 0;
   bottom: 0;
   width: 1px;
-  background: repeating-linear-gradient(
-    to bottom,
-    #464646 0px,
-    #464646 6px,
-    transparent 6px,
-    transparent 14px
-  );
+  background: repeating-linear-gradient(to bottom,
+      #464646 0px,
+      #464646 6px,
+      transparent 6px,
+      transparent 14px);
   pointer-events: none;
   z-index: 0;
 }
@@ -41,5 +39,11 @@ main {
 }
 
 @media (max-width: 640px) {
-  .site-wrap { padding: 48px 24px 80px; }
+  .site-wrap {
+    padding: 32px 16px 64px;
+  }
+
+  main {
+    padding: 12px;
+  }
 }
